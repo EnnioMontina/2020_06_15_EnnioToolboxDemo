@@ -14,9 +14,12 @@ public class ChangeColorWithInputEditor : Editor
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
-        if (GUILayout.Button("Change Color"))
-            m_changeColorWithInput.ChangeColor();
+        if (GUILayout.Button("AddColorChart"))
+            m_changeColorWithInput.AddToColorChart();
+        if (GUILayout.Button("Random Color"))
+            m_changeColorWithInput.RandomColor();
         if (GUILayout.Button("Reset Color"))
             m_changeColorWithInput.ResetColor();
     }
+
 }
