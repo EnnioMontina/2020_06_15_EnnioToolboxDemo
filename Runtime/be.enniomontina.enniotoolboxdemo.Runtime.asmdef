@@ -1,3 +1,15 @@
-﻿{
-	"name": "be.enniomontina.enniotoolboxdemo.Runtime"
+{
+    "name": "be.enniomontina.enniotoolboxdemo.Runtime",
+    "references": [
+        "GUID:e714119affb4bd14e8f494e217c17321"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
