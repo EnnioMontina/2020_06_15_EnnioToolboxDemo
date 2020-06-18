@@ -8,4 +8,4 @@ Il y a un prefab où l'écran sera affiché, et il suffit de link la tête de l'
 -----------------------------------------------------------------------------------------
 
 
-Pour la théorie vite fait, l'affichage s'active quand la variable Head regarde Wrist et que Wrist regarde Head ausi.
+Pour la théorie vite fait, l'affichage s'active quand l'axe FORWARD du gameObject Head regarde Wrist et que l'axe UP Wrist regarde Head ausi.
