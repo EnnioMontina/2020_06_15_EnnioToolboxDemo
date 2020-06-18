@@ -38,10 +38,7 @@ public class WristWatch : MonoBehaviour
     bool isWatching = false;
     private void Start()
     {
-        m_lastName.text = m_creditsData.m_studentName;
-        m_firstName.text = m_creditsData.m_studentFirstName;
-        m_surname.text = m_creditsData.m_Surname;
-        m_studentJob.text = m_creditsData.studentJob.ToString();
+        ResetWatchDisplay();
         m_canvas.gameObject.SetActive(false);
     }
     private void Update()
@@ -66,14 +63,17 @@ public class WristWatch : MonoBehaviour
             }
         }
     }
-
     public void SetWatchDisplayData(CreditsData newData)
     {
         m_creditsData = newData;
-
+        ResetWatchDisplay();
+    }
+    public void ResetWatchDisplay()
+    {
         m_lastName.text = m_creditsData.m_studentName;
         m_firstName.text = m_creditsData.m_studentFirstName;
         m_surname.text = m_creditsData.m_Surname;
         m_studentJob.text = m_creditsData.studentJob.ToString();
     }
+
 }
