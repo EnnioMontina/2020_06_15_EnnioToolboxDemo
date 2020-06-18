@@ -6,5 +6,7 @@
   "description": "ToolBox",
   "keywords": ["Script","Tool"],
   "category": "Script",
-  "dependencies":{}
+  "dependencies":{
+	"be.snake0803.romainctoolbox":"0.0.1"
+  }
 }
