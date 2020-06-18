@@ -7,10 +7,10 @@ public class WristWatch : MonoBehaviour
 {
     [Tooltip("Where the watch is supposed to be ")]
     [SerializeField]
-    GameObject m_wrist;
+    Transform m_wrist;
     [Tooltip("Link to the head")]
     [SerializeField]
-    GameObject m_head;
+    Transform m_head;
     [Tooltip("Angle max between Wrist(Up) look and Head(Forward) look")]
     [SerializeField]
     float m_angle = 25;
@@ -27,7 +27,8 @@ public class WristWatch : MonoBehaviour
     Text m_surname;
     [SerializeField]
     Text m_studentJob;
-
+    [SerializeField]
+    Image m_image;
     [Header("Person data")]
     [SerializeField]
     CreditsData m_creditsData;
@@ -43,8 +44,8 @@ public class WristWatch : MonoBehaviour
     }
     private void Update()
     {
-        if (Vector3.Angle(m_wrist.transform.up, m_head.transform.position - m_wrist.transform.position) < m_angle 
-         && Vector3.Angle(m_head.transform.forward, m_wrist.transform.position - m_head.transform.position) < m_angle)    
+        if (Vector3.Angle(m_wrist.up, m_head.position - m_wrist.position) < m_angle 
+         && Vector3.Angle(m_head.forward, m_wrist.position - m_head.position) < m_angle)    
         {
             if (!isWatching)
             {
@@ -74,6 +75,7 @@ public class WristWatch : MonoBehaviour
         m_firstName.text = m_creditsData.m_studentFirstName;
         m_surname.text = m_creditsData.m_Surname;
         m_studentJob.text = m_creditsData.studentJob.ToString();
+        m_image.sprite = m_creditsData.m_profilePicture;
     }
 
 }
